@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ name }}
+  </h1>
+</div>
+<div  align=center class=a>
+  <div style="text-align: center"> <h1>My Library</h1>  </div>
+  <br>
+  <div align=center>
+  <p> Title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author</p>
+   <input [(ngModel)]="title">
+   <input [(ngModel)]="author">
+  <button  style="background-color: aquamarine"    (click)="addClick()">add</button>
+  </div>
+  <br>
+  <br>
+  <table align=center>
+    <tr>
+      <td>title</td>
+      <td>Author</td>
+      <td>delete</td>
+    </tr>
+  
+    <tr *ngFor="let i of books">
+      <td>{{ i.title1 }}</td>
+      <td>{{ i.author1 }}</td>
+      <td><button (click)="deleteID(i.id)" >delete</button></td>
+
+    </tr>
+
+
+  
+  </table>
+
+  
+</div>
+
+
+<router-outlet></router-outlet>
